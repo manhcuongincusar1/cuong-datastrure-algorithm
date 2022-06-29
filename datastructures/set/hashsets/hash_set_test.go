@@ -87,8 +87,8 @@ func TestHashSetSymmetricDifference(t *testing.T) {
 	set2 := New("cool", "cold", "bye").(*HashSet[string])
 
 	set3 := set1.SymmetricDifference(set2)
-	assert.Equal(t, set3.Size(), 4)
-	assert.Equal(t, set3.ContainsAll("cool", "cold", "hello", "bye"), true)
+	assert.Equal(t, set3.Size(), 2)
+	assert.Equal(t, set3.ContainsAll("hello", "bye"), true)
 }
 func TestHashSetSubtraction(t *testing.T) {
 	set1 := New("hello", "cool", "cold").(*HashSet[string])
