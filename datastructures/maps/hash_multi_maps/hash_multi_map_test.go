@@ -28,10 +28,7 @@ func TestHashMultiMap(t *testing.T) {
 	assert.Equal(t, multiMaps.Size(), 2)
 	assert.True(t, multiMaps.ContainsAll("x", "y"))
 	assert.True(t, multiMaps.ContainsAny("x"))
-	assert.True(t, reflect.DeepEqual(multiMaps.GetValues("y"), []int{1, 3, 4, 56}))
-
-	multiMaps.Remove("y", 3)
-	assert.True(t, reflect.DeepEqual(multiMaps.GetValues("y"), []int{1, 4, 56}))
+	assert.True(t, reflect.DeepEqual(multiMaps.GetValues("y"), []int{3, 4, 56}))
 	// Clear
 	multiMaps.Clear()
 	assert.Equal(t, multiMaps.Size(), 0)
