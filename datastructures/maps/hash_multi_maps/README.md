@@ -12,3 +12,5 @@ Output: ["1", "2"]
 
 ### How to implement?
 - A key will map with an slice of value
+- key: comparable
+- value: slice of comparable
